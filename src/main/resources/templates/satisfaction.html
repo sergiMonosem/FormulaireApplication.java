@@ -1,0 +1,1348 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Enquête de satisfaction Partenaires MONOSEM</title>
+
+</head>
+
+<body>
+<div class="container">
+
+  <!-- Required meta tags
+  <nav class="navbar navbar-expand-lg navbar-light bg-light>
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/images/logo.png" width="150" height="50" alt="Logo" class="d-inline-block align-text-top">
+      </a>
+    </div>
+
+
+  </nav>
+-->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+
+        <img src="/images/logo.png" width="150" height="50" alt="Logo" class="d-inline-block align-text-top">
+
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/}">Français</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/english}">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/deutsch}">Deutsch</a>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class= "bg-image" style="background-image:url('https://www.monosem.fr/fr/wp-content/uploads/2022/10/ULTIMATE-scaled.jpg');height: 50vh"></div>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Enquête de satisfaction partenaires Monosem 2023.</h1>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class= "bg-image" style="background-image:url('https://www.monosem.fr/fr/wp-content/uploads/2022/06/precision-ms.jpg');height: 50vh"></div>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Enquête de satisfaction partenaires Monosem 2023.</h1>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <br/> <p class="success">Les questions marquées d'un * sont requises.<br/> <br/>
+
+  Cher partenaire,<br/>
+  Afin de répondre au mieux à vos demandes et d’améliorer la qualité globale de nos services, nous souhaitons connaître comme lors des précédentes enquêtes votre opinion sur différents aspects de notre société. (Durée ~10mn).
+  <br/> <br/> Vos réponses nous aideront à améliorer nos produits et services.
+
+</p>
+
+
+
+  <!--
+
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationCustom03" required>
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">State</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Choose...</option>
+          <option>...</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+
+  -->
+  <form class="row g-3 needs-validation" novalidate th:action="@{/save}" method="post" th:object="${user}">
+
+    <p  class="text-success">
+    </p><br/> <br/>
+
+    <div class="col-md-11">
+      <label for="validationCustom01" class="form-label">Prénom *</label>
+      <input type="text" th:field="*{prenom}" class="form-control" id="validationCustom01" required>
+      <span class="invalid-feedback">Le champs prénom est requis!</span>
+      <div class="valid-feedback">
+
+      </div>
+    </div>
+
+
+    <div class="col-md-11">
+      <label for="validationCustom02" class="form-label">Nom *</label>
+      <input type="text" th:field="*{nom}" class="form-control"
+             id="validationCustom02"  required>
+      <span class="invalid-feedback">Le champs nom est requis!</span>
+      <div class="valid-feedback">
+
+
+      </div>
+
+
+    </div>
+
+    <div class="col-md-11">
+      <label for="validationCustom03" class="form-label">Fonction *</label>
+      <input type="text" th:field="*{fonction}" class="form-control"   id="validationCustom03" required>
+
+      <span class="invalid-feedback">Le champs fonction est requis!</span>
+
+    </div>
+
+    <div class="col-md-11">
+      <label for="validationCustom04" class="form-label">Entreprise *</label>
+      <input type="text" th:field="*{votreEntreprise}" class="form-control" required
+             id="validationCustom04">
+      <span class="invalid-feedback">Le champs nom de l'entreprise est requis!</span>
+      <br/>
+    </div>
+
+
+
+    <h5 class="align-middle">Produits distribués</h5><br/>
+
+    <div class="col-4">
+
+      <div class="form-check"  aria-describedby="invalidCheck3Feedback" required>
+        <label class="form-check-label" for="invalidCheck3">
+          Semoirs</label>
+        <input class="form-check-input" type="checkbox" th:field="*{semoirs}" value="Semoirs" id="semoirs">
+
+        <div id="invalidCheck3Feek" class="invalid-feedback">
+          <span class="invalid-feedback">Le champs est obligatoire</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="form-check">
+        <label class="form-check-label" for="invalidCheck3">
+          Bineuses</label>
+        <input  class="form-check-input " type="checkbox"th:field="*{bineuse}" value="Bineuses" id="bineuse" >
+
+        <div class="invalid-feedback">
+          <span class="invalid-feedback">Le champs est obligatoire</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="form-check">
+        <label class="form-check-label" for="invalidCheck3">
+          Semoirs Maraîchers </label>
+        <input class="form-check-input" type="checkbox" th:field="*{semoirsMaraichers}" value="Semoirs Maraîchers" id="invalidCheck3" >
+        <span class="invalid-feedback">Le champs est obligatoire</span>
+        <div id="&" class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>Merci pour chaque question d’indiquer par une note sur 10 votre niveau de satisfaction.
+        (De 0 = fortement mécontent à 10 = excellent).
+        Si votre note est inférieure à 7, merci de préciser pourquoi en fin de formulaire.
+      </p>
+
+    </div>
+
+
+
+
+    <br/> <br/><h5 class="align-middle">Si avant de remplir ce questionnaire, vous deviez juger MONOSEM </h5><br/>
+
+
+
+
+    <div class="col-md-11">
+      <label for="validationCustom05" class="form-label">Quelle note générale lui attribueriez-vous ? *</label>
+      <select th:value="${user.noteGeneraleAvantQuestionnaire}" class="form-control" id="validationCustom05" required>
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <span class="invalid-feedback">
+        Merci de sélectionner une note!
+      </span>
+    </div>
+
+
+    <br/>
+
+
+    <div  class="form-floating col-md-11">
+      <label for="validationCustom100" class="form-label">Quels sont ses points forts ? *</label>
+
+      <textarea class="form-control " th:field="*{pointsFortsAvantQuestionnaire}"
+                id="validationCustom100"  required></textarea>
+
+
+      <span class="invalid-feedback">Le champs est obligatoire</span>
+    </div >
+
+
+<br/>
+
+
+
+    <div  class="form-floating col-md-11">
+      <label for="validationCustom101" class="form-label">Quels sont ses points faibles ? *</label>
+
+      <textarea class="form-control " th:field="*{pointsFaiblesAvantQuestionnaire}"
+                id="validationCustom101"  required></textarea>
+
+
+      <span class="invalid-feedback">Le champs est obligatoire</span>
+    </div >
+
+
+
+      <br/>
+
+
+
+
+
+
+
+
+    <h4>Accueil:</h4>
+    <div class="col-md-11" required>
+      <label for="validationCustom10" class="form-label">Qualité de l’accueil téléphonique *</label>
+      <select  class="form-select "  th:value="${user.noteGenerale}" id="validationCustom10" name="noteGenerale"
+               aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <div class="col-md-11">
+      <label for="validationCustom11" class="form-label">Disponibilité et rapidité des réponses aux demandes * </label>
+      <select class="form-select" th:value="${user.accueilDisponibiliteRapiditeReponsesDemandes}" id="validationCustom11"
+              name="accueilDisponibiliteRapiditeReponsesDemandes"
+              aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+
+      <span class="invalid-feedback">Merci de sélectionner une note!</span><br/>
+    </div>
+
+    <h4>Commercial:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom12" class="form-label">Présence de l’équipe Commerciale Monosem à vos côtés *</label>
+      <select class="form-select"  th:value="${user.accueilPresenceEquipeCommercialeMonosem}"
+              name="accueilPresenceEquipeCommercialeMonosem" id="validationCustom12"
+              aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom13" class="form-label">Enregistrement des commandes, suivi, clarté des documents *</label>
+      <select class="form-select " th:value="${user.commercialEnrCommandesSuivi}" name="commercialEnrCommandesSuivi"
+              id="validationCustom13" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+
+      <span class="invalid-feedback">Merci de sélectionner une note!</span><br/>
+    </div>
+
+
+    <div class="col-md-11">
+      <label for="validationCustom14" class="form-label">Gestion des demandes spéciales et devis *</label>
+      <select class="form-select" th:value="${user.commercialGestDemandesSpecial}" name="commercialGestDemandesSpecial"
+              id="validationCustom14" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom15" class="form-label">Pertinence et compréhension des conditions de ventes *</label>
+      <select class="form-select" th:value="${user.commercialPertinenceComprehensionVente}"
+              name="commercialPertinenceComprehensionVente" id="validationCustom15"
+              aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+    <h4>Marketing:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom16" class="form-label">Promotion de la marque et des produits (Salons, publicité, …) *</label>
+      <select class="form-select" th:value="${user.marketingPromotionMarque}" name="marketingPromotionMarque"
+              id="validationCustom16" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <div class="col-md-11">
+      <label for="validationCustom17" class="form-label">Supports à la vente (Brochure,  …) *</label>
+      <select class="form-select" th:value="${user.marketingSupportVente}" name="marketingSupportVente"
+              id="validationCustom17" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom18" class="form-label">Facilité d’utilisation du tarif et contenu *</label>
+      <select class="form-select" th:value="${user.marketingFaciliteUtilisation}"
+              name="marketingFaciliteUtilisation"  id="validationCustom18" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom19" class="form-label">Information produit et modification *</label>
+      <select class="form-select" th:value="${user.marketingInfoProduitModif}"
+              name="marketingInfoProduitModif"  id="validationCustom19" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="col-md-11">
+      <label for="validationCustom47" class="form-label">Convivialité et contenu du site internet www.monosem.com *</label>
+      <select class="form-select" th:value="${user.marketingConvialiteSiteWeb}"
+              name="marketingConvialiteSiteWeb"  id="validationCustom47" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+
+    <div class="col-md-11">
+      <label for="validationCustom50" class="form-label">Présence sur les réseaux sociaux et contenu *</label>
+      <select class="form-select" th:value="${user.marketingPresenceReseauxSociaux}"
+              name="marketingConvialiteSiteWeb"  id="validationCustom50" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4>Formations:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom20" class="form-label">Formations commerciales *</label>
+      <select class="form-select" th:value="${user.formationComm}" name="formationComm"
+              id="validationCustom20" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom21" class="form-label">Formations techniciens (mise en route, supports techniques et montage) *</label>
+      <select class="form-select" th:value="${user.formationTechniciens}" name="formationTechniciens"
+              id="validationCustom21" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom22" class="form-label">Formations semoirs électriques et fonctionnalités Isobus *</label>
+      <select class="form-select" th:value="${user.formationSemoirsElectriquesFonct}" name="formationSemoirsElectriquesFonct"
+              id="validationCustom22" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom23" class="form-label">Formations montage(Pour les partenaires concernés) *</label>
+      <select class="form-select" th:value="${user.formationMontage}" name="formationMontage"
+              id="validationCustom23" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Logistique:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom24" class="form-label">Disponibilité des matériels *</label>
+      <select class="form-select" th:value="${user.logistiqueDisponibiliteMat}" name="logistiqueDisponibiliteMat"
+              id="validationCustom24" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom25" class="form-label">Informations sur les délais, l’enlèvement et les transports * </label>
+      <select class="form-select"  th:value="${user.logistiqueInfoDelais}" name="logistiqueInfoDelais"
+              id="validationCustom25" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom26" class="form-label">Respect des délais *</label>
+      <select class="form-select" th:value="${user.logistiqueRespectDelais}" name="logistiqueRespectDelais"
+              id="validationCustom26" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <div class="col-md-11">
+      <label for="validationCustom27" class="form-label">Qualité des emballages, chargements et livraisons *</label>
+      <select class="form-select"   th:value="${user.logistiqueQualiteEmballages}"
+              name="logistiqueQualiteEmballages" id="validationCustom27" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Qualité:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom28" class="form-label">Qualité des produits et leur finition *</label>
+      <select class="form-select"  th:value="${user.qualiteProduitsFinition}"
+              name="qualiteProduitsFinition"  id="validationCustom28" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+
+
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom29" class="form-label">Conformité des produits livrés par rapport à la commande *</label>
+      <select class="form-select"  th:value="${user.qualiteConforProduitsLivres}"
+              name="qualiteConforProduitsLivres"   id="validationCustom29" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+
+
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom30" class="form-label">Qualité de montage en usine des machines *</label>
+      <select class="form-select" th:value="${user.qualiteMontageUsine}"
+              name="qualiteMontageUsine"  id="validationCustom30" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Support client:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom31" class="form-label">Gestion des problèmes techniques en saison (Rapidité de réponse
+        de dépannage) *
+      </label>
+      <select class="form-select" th:value="${user.supportGestionProblemeTech}"
+              name="supportGestionProblemeTech"  id="validationCustom31" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom32" class="form-label">Conditions et gestion des garanties (Après vente) *</label>
+      <select class="form-select " th:value="${user.supportCondGestionGaranties}"
+              name="supportCondGestionGaranties" id="validationCustom32" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom33" class="form-label">Facilité d’utilisation de l’outil Web (Demande de garantie et retour pièces) *</label>
+      <select class="form-select" th:value="${user.supportFaciliteUtilisateurOutilWeb}"
+              name="supportFaciliteUtilisateurOutilWeb" id="validationCustom33" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom" class="form-label">Qualités des supports techniques (Notices d’utilisation, …) *</label>
+      <select class="form-select"  th:value="${user.supportQualiteSupportsTech}"
+              name="supportQualiteSupportsTech" id="validationCustom" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+
+    <div class="col-md-11">
+      <label for="validationCustom34" class="form-label">Présence de l’équipe Technique Monosem (Mise en route, …) *</label>
+      <select class="form-select"  th:value="${user.supportPresenceEquipeTech}"
+              name="supportQualiteSupportsTech" id="validationCustom34" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+
+
+
+
+    <h4>Pièce de rechange:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom35" class="form-label">Supports pièces de rechange (Catalogue pièces, références, …) *
+      </label>
+      <select class="form-select" th:value="${user.pceRechangeSupportPceRechange}"
+              name="pceRechangeSupportPceRechange" id="validationCustom35" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom36" class="form-label">Enregistrement et suivi des commandes pièces *</label>
+      <select class="form-select"   th:value="${user.pceRechangeEnrSuiviComm}"
+              name="pceRechangeEnrSuiviComm" id="validationCustom36" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom37" class="form-label">Disponibilité et livraison des pièces *</label>
+      <select class="form-select" th:value="${user.pceRechangeDispoLivraisonPiece}"
+              name="pceRechangeDispoLivraisonPiece" id="validationCustom37" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom38" class="form-label">Intérêt des kits renovation semoir *</label>
+      <select class="form-select" th:value="${user.pceRechangeInteretKitsRenovation}"
+              name="pceRechangeInteretKitsRenovation" id="validationCustom38" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Conception et évolution:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom39" class="form-label">Ergonomie, facilité d’utilisation et d’entretien des produits *
+      </label>
+      <select class="form-select"  th:value="${user.conceptEvolErgoFaciliteUtil}"
+              name="conceptEvolErgoFaciliteUtil" id="validationCustom39" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom40" class="form-label">Correspondance de l’offre aux besoins de votre marché *</label>
+      <select class="form-select" th:value="${user.conceptEvolCorrOffreBesoin}"
+              name="conceptEvolCorrOffreBesoin" id="validationCustom40" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom41" class="form-label">Capacité d’innovation *</label>
+      <select class="form-select" th:value="${user.conceptEvolCapaciteInnov}"
+              name="conceptEvolCapaciteInnov" id="validationCustom41" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom42" class="form-label">Evolution du design des produits *</label>
+      <select class="form-select"  th:value="${user.conceptEvolDesignProduits}"
+              name="conceptEvolDesignProduits" id="validationCustom42" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Rapport qualité / Prix:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom43" class="form-label">Qualité prix du matériel par rapport au marché *</label>
+      <select class="form-select" th:value="${user.qualitePrixMatMarche}"
+              name="qualitePrixMatMarche" id="validationCustom43" aria-describedby="validationServer04Feedback" required>
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+    <div class="col-md-11">
+      <label for="validationCustom44" class="form-label">Qualité prix des pièces de rechange *</label>
+      <select class="form-select" th:value="${user.qualitePceRechange}"
+              name="qualitePceRechange" id="validationCustom44" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+    </div>
+
+    <h4>Politique environnementale:</h4>
+    <div class="col-md-11">
+      <label for="validationCustom45" class="form-label">Pensez-vous que Monosem est impliqué dans une démarche environnementale *
+      </label>
+      <select class="form-select" th:value="${user.polEnvDemarcheEnv}"
+              name="polEnvDemarcheEnv" id="validationCustom45" aria-describedby="validationServer04Feedback" required>
+
+
+        <option selected disabled value="">Donner une note sur 10</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+      </select>
+      <span class="invalid-feedback">Merci de sélectionner une note!</span>
+      <br/>
+
+    </div>
+    <div  class="form-floating col-md-11">
+      <textarea class="form-control " th:value="${user.commentaire}" placeholder="COMMENTAIRES"
+                id="floatingTextarea" ></textarea>
+      <label for="floatingTextarea">COMMENTAIRES </label>
+
+      <span class="invalid-feedback">Le champs est obligatoire</span>
+    </div >
+
+    <div class="col-md-8">
+      <button class="btn btn-primary" id="maFormulaire" type="submit">Envoyer</button>
+    </div>
+
+  </form>
+</div> <br/>
+
+<div class="card-footer text-muted">
+  Merci pour votre collaboration
+</div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script>
+
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+              }, false)
+            })
+  })()
+
+</script>
+
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
